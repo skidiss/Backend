@@ -1,0 +1,5 @@
+filedepot==0.8.0
+boto3==1.21.13
+Flask-RESTful==0.3.8
+PyJWT==1.7.1
+Flask-SQLAlchemy==2.4.1
