@@ -1,7 +1,7 @@
 ![](images/DermaSkin%20logo.png)
 
 # DermaSkin App Backend 
-This repository is backend f DermaSkin APP.
+This repository is backend of DermaSkin APP.
 # Technologies
 The project created with :
 * python37 with flask
