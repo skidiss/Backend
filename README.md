@@ -1,4 +1,5 @@
-! [](images/DermaSkin logo.png)
+![](images/DermaSkin%20logo.png)
+
 # DermaSkin App Backend 
 This repository is backend f DermaSkin APP.
 # Technologies
