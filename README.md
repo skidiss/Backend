@@ -5,6 +5,8 @@ This repository is backend of DermaSkin APP.
 Project is created with:
 * Python version: 3.7
 * Flask
+* Flask-Alchemy
+* SQlite3
 * Google Compute Engine (VM Instances)
 * Google Cloud Bucket
 
