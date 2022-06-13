@@ -1,17 +1,37 @@
-![](images/DermaSkin%20logo.png)
+## DermaSkin App Backend
+This repository is backend of DermaSkin APP. 
 
-# DermaSkin App Backend 
-This repository is backend of DermaSkin APP.
-# Technologies
-The project created with :
-* python37 with flask
-* Virtual Machine
-* Mysql
+## Technologies
+Project is created with:
+* Python version: 3.7
+* Flask
+* Google Compute Engine (VM Instances)
+* Google Cloud Bucket
 
-# Steps to configure and deployment using flask
-- Create 2 buckets in cloud storage for GET and POSH processes resulting from the detection process
-   * Create a virtual machine on the GCP compute engine with Deep Learning for Linux Tensorflow 2.2 image
-   * Install libraries in virtual machines such as a. tensorflow==2.2.0 b. h5py==2.10.0 c. Flask-RESTful==0.3.8 d. Flask-SQLAlchemy==2.4.1 e. filedepot==0.8.0
-  * main.py Scripting Process
-  * Run main.py with the command sudo python3 main.py& (on linux) 
-  * The flash is running and the API has been obtained according to the External IP on the compute engine
+## Setup for Local
+To run this project locally setup Vagrant on local machine that has been installed vagrant using ssh:
+```powershell
+> mkdir backend
+> cd backend
+> vagrant init debian/bullseye64
+> vagrant up
+> vagrant ssh
+```
+
+## Setup for deployment on GCP
+Login to Instance SSH
+```bash
+~$ sudo apt update && sudo apt -y upgrade
+~$ sudo apt install python3-venv
+~$ sudo apt install git
+~$ git clone git@github.com:skidiss/Backend.git
+~$ cd Backend
+~$ pip install -r requirements.txt
+~$ python 
+   >> from app import db
+   >> db.create_all()
+~$ gunicorn -w 4 0.0.0.0:5000 app:app
+```
+## API Documentation
+https://documenter.getpostman.com/view/21367624/Uz5NkDUZ
+
